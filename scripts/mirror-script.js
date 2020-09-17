@@ -8,8 +8,9 @@ window.onload = function() {
     navigator.getUserMedia(
         {video: true},
         function(stream) {
-            videoStreamUrl = window.URL.createObjectURL(stream);
-            video.src = videoStreamUrl
+            //videoStreamUrl = window.URL.createObjectURL(stream);
+            //console.log(videoStreamUrl);
+            video.srcObject = stream;
         },
         function(){
             alert('извините за мой французский, но вы пидор..');
