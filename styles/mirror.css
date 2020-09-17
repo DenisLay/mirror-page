@@ -4,7 +4,14 @@ body {
 }
 
 .mirror {
-    border: 1px solid red;
-    width: 100%;
-    height: 100%;
+    background-color: rgb(22, 22, 21);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#video {
+    width: 99.85vw;
+    height: 99.85vh;
 }
