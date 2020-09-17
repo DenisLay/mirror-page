@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.mirror {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
