@@ -1,6 +1,9 @@
 window.onload = function() {
     var video = document.getElementById('video');
-    var videoStreamUrl = false;
+    var mirror = document.getElementById('mirror');
+    var allow = document.getElementById('allow');
+
+    
 
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     window.URL.createObjectURL = window.URL.createObjectURL || window.URL.webkitCreateObjectURL || window.URL.mozCreateObjectURL || window.URL.msCreateObjectURL;
@@ -8,12 +11,12 @@ window.onload = function() {
     navigator.getUserMedia(
         {video: true},
         function(stream) {
-            //videoStreamUrl = window.URL.createObjectURL(stream);
-            //console.log(videoStreamUrl);
+            allow.style.display = 'none';
+            mirror.style.display = 'block';
             video.srcObject = stream;
         },
         function(){
-            alert('извините за мой французский, но вы пидор..');
+            allow.innerHTML = 'зря...';
         }
     )
 }
